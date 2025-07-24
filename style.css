@@ -1,0 +1,97 @@
+/* Reset básico */
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Corpo da página */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fafafa;
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/* Cabeçalho */
+header {
+  max-width: 900px;
+  margin: 0 auto 30px auto;
+  text-align: center;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #b5838d;
+}
+
+header h1 {
+  color: #5c3d71;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+/* Navegação */
+nav a {
+  text-decoration: none;
+  color: #5c3d71;
+  margin: 0 15px;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #b5838d;
+}
+
+/* Conteúdo principal */
+main {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Seção sobre */
+.sobre {
+  background-color: #fff;
+  padding: 25px 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgb(0 0 0 / 0.05);
+  margin-bottom: 40px;
+}
+
+/* Títulos das seções */
+h2 {
+  color: #5c3d71;
+  margin-bottom: 20px;
+}
+
+/* Parágrafos */
+p {
+  margin-bottom: 18px;
+  font-size: 18px;
+}
+
+/* Link com destaque - CTA */
+a.cta {
+  display: inline-block;
+  background-color: #b5838d;
+  color: #fff;
+  padding: 12px 22px;
+  border-radius: 30px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+a.cta:hover {
+  background-color: #7a4b58;
+}
+
+/* Rodapé */
+footer {
+  max-width: 900px;
+  margin: 50px auto 0 auto;
+  text-align: center;
+  color: #999;
+  font-size: 14px;
+}
