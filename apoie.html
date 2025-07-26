@@ -1,3 +1,23 @@
+Ótimo\! Que bom que a página `conecte-se.html` já está com todas as atualizações.
+
+Vamos agora para a página **`apoie.html` (Apoie a Causa)**. Esta é a versão que incorpora a correção da responsividade das listas, apresentando-as de forma mais limpa em uma única coluna.
+
+Por favor, copie e cole **TODO** este código no seu arquivo `apoie.html` no Replit, substituindo todo o conteúdo atual.
+
+Ele já inclui:
+
+  * Os links do favicon corrigidos para a pasta `img/`.
+  * As fontes Google Fonts e os estilos Tailwind para as fontes.
+  * A nova paleta de cores (teal e rosa).
+  * O cabeçalho e rodapé consistentes com o resto do site.
+  * O link "Apoie a Causa" marcado como ativo na navegação.
+  * O conteúdo das seções "Por Que Sua Empresa Deve Apoiar?" e "Como Sua Empresa Pode Contribuir?" com a diagramação aprimorada em coluna única, garantindo responsividade e clareza.
+
+-----
+
+## 7\. Página `apoie.html` (Apoie a Causa) - Versão Final e Completa
+
+```html
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -8,7 +28,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="img/favicon_io/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon_io/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon_io/favicon-16x16.png">
-    <link rel="manifest" href="/img/favicon_io/site.webmanifest">
+    <link rel="manifest" href="img/favicon_io/site.webmanifest">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
@@ -29,7 +49,7 @@
         <div class="container mx-auto flex justify-between items-center">
             <h1 class="text-3xl font-playfair font-extrabold text-teal-800">
                 <a href="index.html" class="hover:text-teal-900">
-                    <img src="/img/logo.png" alt="+40 Menos Pausas Logo" class="h-10 md:h-12 w-auto">
+                    <img src="img/logo.png" alt="+40 Menos Pausas Logo" class="h-10 md:h-12 w-auto">
                 </a>
             </h1>
             <nav class="flex-grow flex justify-center">
@@ -115,7 +135,7 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <div class="bg-white rounded-lg shadow-md p-6 text-center transform hover:scale-105 transition duration-300 flex flex-col items-center">
                         <div class="w-32 h-20 flex items-center justify-center mb-4">
-                            <img src="/img/placeholder-logo-tech.png" alt="Logo Empresa de Tecnologia" class="h-full w-auto object-contain">
+                            <img src="img/placeholder-logo-tech.png" alt="Logo Empresa de Tecnologia" class="h-full w-auto object-contain">
                         </div>
                         <h4 class="text-xl font-playfair font-bold text-gray-900 mb-2">Tech Solutions Inc.</h4>
                         <p class="text-gray-700 font-lato text-sm mb-4 line-clamp-3">
@@ -128,7 +148,7 @@
 
                     <div class="bg-white rounded-lg shadow-md p-6 text-center transform hover:scale-105 transition duration-300 flex flex-col items-center">
                         <div class="w-32 h-20 flex items-center justify-center mb-4">
-                            <img src="/img/placeholder-logo-rh.png" alt="Logo Consultoria de RH" class="h-full w-auto object-contain">
+                            <img src="img/placeholder-logo-rh.png" alt="Logo Consultoria de RH" class="h-full w-auto object-contain">
                         </div>
                         <h4 class="text-xl font-playfair font-bold text-gray-900 mb-2">RH Valorizado</h4>
                         <p class="text-gray-700 font-lato text-sm mb-4 line-clamp-3">
@@ -141,7 +161,7 @@
 
                     <div class="bg-white rounded-lg shadow-md p-6 text-center transform hover:scale-105 transition duration-300 flex flex-col items-center">
                         <div class="w-32 h-20 flex items-center justify-center mb-4">
-                            <img src="/img/placeholder-logo-comunidade.png" alt="Logo Comunidade de Dev" class="h-full w-auto object-contain">
+                            <img src="img/placeholder-logo-comunidade.png" alt="Logo Comunidade de Dev" class="h-full w-auto object-contain">
                         </div>
                         <h4 class="text-xl font-playfair font-bold text-gray-900 mb-2">Devs por Todas</h4>
                         <p class="text-gray-700 font-lato text-sm mb-4 line-clamp-3">
@@ -151,9 +171,8 @@
                             Saiba Mais &rarr;
                         </a>
                     </div>
-                    </div>
+                </div>
             </div>
-
         </section>
     </main>
 
@@ -165,3 +184,4 @@
 
 </body>
 </html>
+```
