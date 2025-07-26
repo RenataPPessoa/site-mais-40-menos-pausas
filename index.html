@@ -12,9 +12,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         /* Estilos personalizados para aplicar as fontes */
@@ -24,56 +21,6 @@
         .font-lato {
             font-family: 'Lato', sans-serif;
         }
-        
-        /* Estilos CSS para o menu mobile */
-        /* O menu mobile começa escondido por padrão e é mostrado por JS */
-        .mobile-menu {
-            transform: translateX(100%); /* Esconde ele para a direita */
-            transition: transform 0.3s ease-out; /* Adiciona uma transição suave */
-        }
-        .mobile-menu.active {
-            transform: translateX(0); /* Move para a posição visível */
-        }
-
-        /* Oculta o menu de desktop e mostra o ícone de hambúrguer em telas pequenas */
-        @media (max-width: 767px) { /* Tailwind's 'md' breakpoint is 768px */
-            .desktop-nav {
-                display: none;
-            }
-            .hamburger-button {
-                display: block; /* Mostra o botão de hambúrguer */
-            }
-            /* Garante que o menu mobile esteja fixed */
-            .mobile-menu-container {
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 100vw;
-                height: 100vh;
-                background-color: rgba(255, 255, 255, 0.95); /* Fundo semi-transparente */
-                z-index: 50; /* Garante que fique acima de outros conteúdos */
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                padding: 20px;
-            }
-            .mobile-menu-container ul {
-                flex-direction: column;
-                gap: 20px; /* Espaçamento entre os itens do menu mobile */
-            }
-            .mobile-menu-container ul li a {
-                font-size: 1.5rem; /* Tamanho da fonte maior para mobile */
-            }
-        }
-        /* Oculta o ícone de hambúrguer e mostra o menu de desktop em telas médias e maiores */
-        @media (min-width: 768px) { /* Tailwind's 'md' breakpoint */
-            .desktop-nav {
-                display: flex; /* Mostra a navegação desktop */
-            }
-            .hamburger-button {
-                display: none; /* Oculta o botão de hambúrguer */
-            }
-        }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-900 font-lato leading-relaxed flex flex-col min-h-screen">
@@ -82,11 +29,10 @@
         <div class="container mx-auto flex justify-between items-center">
             <h1 class="text-3xl font-playfair font-extrabold text-teal-800">
                 <a href="index.html" class="hover:text-teal-900">
-                    +40 Menos Pausas
+                    <img src="img/logo.png" alt="+40 Menos Pausas Logo" class="h-10 md:h-12 w-auto">
                 </a>
             </h1>
-            
-            <nav class="desktop-nav flex-grow flex justify-center hidden md:flex">
+            <nav class="flex-grow flex justify-center">
                 <ul class="flex space-x-6 text-lg font-semibold">
                     <li><a href="index.html" class="text-teal-700 hover:text-teal-800 transition duration-300">Início</a></li>
                     <li><a href="sobre.html" class="text-gray-700 hover:text-teal-800 transition duration-300">Quem Somos</a></li>
@@ -98,28 +44,8 @@
                     <li><a href="contato.html" class="text-gray-700 hover:text-teal-800 transition duration-300">Contato</a></li>
                 </ul>
             </nav>
-
-            <button id="hamburgerButton" class="hamburger-button text-teal-800 text-2xl p-2 focus:outline-none md:hidden z-50">
-                <i class="fas fa-bars"></i>
-            </button>
         </div>
     </header>
-
-    <div id="mobileMenu" class="mobile-menu-container mobile-menu hidden">
-        <button id="closeMenuButton" class="absolute top-4 right-4 text-teal-800 text-3xl focus:outline-none">
-            <i class="fas fa-times"></i>
-        </button>
-        <ul class="flex flex-col space-y-6 text-2xl font-semibold">
-            <li><a href="index.html" class="text-teal-700 hover:text-teal-800 transition duration-300">Início</a></li>
-            <li><a href="sobre.html" class="text-gray-700 hover:text-teal-800 transition duration-300">Quem Somos</a></li>
-            <li><a href="manifesto.html" class="text-gray-700 hover:text-teal-800 transition duration-300">Nosso Manifesto</a></li>
-            <li><a href="blog.html" class="text-gray-700 hover:text-teal-800 transition duration-300">Blog</a></li>
-            <li><a href="compartilhe.html" class="text-gray-700 hover:text-teal-800 transition duration-300">Compartilhe</a></li>
-            <li><a href="conecte-se.html" class="text-gray-700 hover:text-teal-800 transition duration-300">Conecte-se</a></li>
-            <li><a href="apoie.html" class="text-gray-700 hover:text-teal-800 transition duration-300">Apoie a Causa</a></li>
-            <li><a href="contato.html" class="text-gray-700 hover:text-teal-800 transition duration-300">Contato</a></li>
-        </ul>
-    </div>
 
     <main class="flex-grow">
         <section id="hero" class="bg-white text-gray-800 py-4 md:py-8 text-center">
@@ -189,32 +115,5 @@
         </div>
     </footer>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const hamburgerButton = document.getElementById('hamburgerButton');
-            const mobileMenu = document.getElementById('mobileMenu');
-            const closeMenuButton = document.getElementById('closeMenuButton');
-
-            if (hamburgerButton && mobileMenu && closeMenuButton) {
-                hamburgerButton.addEventListener('click', function() {
-                    mobileMenu.classList.toggle('hidden');
-                    mobileMenu.classList.toggle('active');
-                });
-
-                closeMenuButton.addEventListener('click', function() {
-                    mobileMenu.classList.add('hidden');
-                    mobileMenu.classList.remove('active');
-                });
-
-                // Fechar menu quando um item é clicado (para navegação mobile)
-                mobileMenu.querySelectorAll('a').forEach(item => {
-                    item.addEventListener('click', () => {
-                        mobileMenu.classList.add('hidden');
-                        mobileMenu.classList.remove('active');
-                    });
-                });
-            }
-        });
-    </script>
 </body>
 </html>
